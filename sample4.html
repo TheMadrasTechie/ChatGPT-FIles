@@ -1,0 +1,32 @@
+<div class="pdf-container">
+  <iframe src="doc2.pdf"></iframe>
+  <div class="text-box">This is a text box</div>
+</div>
+
+<style>
+.pdf-container {
+  position: relative;
+}
+iframe {
+  width: 100%;
+  height: 100%;
+}
+.text-box {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 200px;
+  height: 50px;
+  background-color: yellow;
+  border: 1px solid black;
+  z-index: 1;
+}
+</style>
+
+<script>
+// Add event listener to the text box
+var textBox = document.querySelector('.text-box');
+textBox.addEventListener('click', function(event) {
+  alert('You clicked on the text box!');
+});
+</script>
